@@ -34,7 +34,7 @@ const AddNoteForm = () => {
       <button
         disabled={!formIsValid}
         type="submit"
-        className="btn-primary"
+        className="btn btn-primary"
       >
         Add note
       </button>
