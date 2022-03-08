@@ -10,7 +10,7 @@ const NotesList = () => {
   if (notes.length === 0) {
     return (
       <div className="notes-list container">
-        <h1>No notes</h1>
+        <h1 className="notes-header">No notes</h1>
       </div>
     );
   }
@@ -21,7 +21,7 @@ const NotesList = () => {
 
   return (
     <div className="notes-list container">
-      <h1>Latest notes</h1>
+      <h1 className="notes-header">Latest notes</h1>
       <ul>{notesList}</ul>
     </div>
   );
