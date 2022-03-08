@@ -32,8 +32,15 @@ const notesReducer = (state, action) => {
     return {
       notes: updatedNotes,
     };
-    console.log(state);
   }
+
+  if (action.type === 'ADD') {
+    const updatedNotes = [...state.notes, action.note];
+    return {
+      notes: updatedNotes,
+    };
+  }
+
   return defaultNotesState;
 };
 
@@ -47,7 +54,11 @@ const NotesProvider = (props) => {
     dispatchNotesAction({ type: 'DELETE', id: id });
   };
 
-  const notesContext = { notes: notesState.notes, deleteNote };
+  const addNote = (note) => {
+    dispatchNotesAction({ type: 'ADD', note: note });
+  };
+
+  const notesContext = { notes: notesState.notes, deleteNote, addNote };
 
   return (
     <NotesContext.Provider value={notesContext}>

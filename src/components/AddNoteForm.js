@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import NotesContext from '../store/notes-context';
 
 const isNotEmpty = (value) => {
   return value.trim() !== '';
 };
 
 const AddNoteForm = () => {
+  const notesContext = useContext(NotesContext);
+
   const [noteContent, setNoteContent] = useState('');
 
   const formIsValid = isNotEmpty(noteContent);
@@ -16,7 +19,11 @@ const AddNoteForm = () => {
       return;
     }
 
-    console.log(noteContent);
+    notesContext.addNote({
+      id: Math.random(),
+      date: Date.now(),
+      content: noteContent,
+    });
   };
 
   return (
