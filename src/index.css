@@ -104,6 +104,10 @@ textarea {
 
 .note-content {
     width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
 }
 
 .btn-delete {
