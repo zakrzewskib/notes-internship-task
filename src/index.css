@@ -15,7 +15,6 @@ body {
     top: 0;
     background-color: #ddd;
     padding: 1.6rem;
-    margin-bottom: 1.6rem;
 }
 
 .main-header h1 {
@@ -26,18 +25,17 @@ body {
 
 .container {
     max-width: 120rem;
-    padding: 0 2.4rem;
+    padding: 2.4rem;
     margin: 0 auto;
 }
 
 .add-note-form {
+    color: #444;
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
-    margin-bottom: 2.4rem;
-    color: #444;
 }
 
 .add-note-form label,
@@ -92,13 +90,37 @@ textarea {
 }
 
 .note {
-    font-size: 2.4rem;
     background-color: #eee;
     padding: 1.6rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-content p {
+    font-size: 1.8rem;
     color: #444;
+}
+
+.note-content {
+    width: 66%;
 }
 
 .btn-delete {
     color: #fff;
     background-color: #e93f3c;
+}
+
+.note-button-container {
+    padding: 2.4rem;
+    align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .note {
+        flex-direction: column;
+    }
+    .note-content {
+        width: 100%;
+    }
 }
