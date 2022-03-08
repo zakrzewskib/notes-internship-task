@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const maxNoteLength = 200;
 
@@ -12,7 +13,7 @@ const Note = (props) => {
   return (
     <li className="note">
       <div className="note-content">
-        <p>{content}</p>
+        <ReactMarkdown className="markdown">{content}</ReactMarkdown>
         <p className="note-date">{note.date}</p>
       </div>
       <div className="note-button-container">
