@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import NotesProvider from './store/NotesProvider';
+
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import NotePage from './components/Notes/NotePage';
+import Header from './components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NotesProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/notes/:id" element={<NotePage />} />
+        </Routes>
+      </BrowserRouter>
+    </NotesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,0 +1,17 @@
+.notes-header {
+    text-align: center;
+}
+
+.notes-header h1 {
+    font-size: 2.8rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.notes-list ul {
+    margin-top: 1.8rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
