@@ -7,6 +7,11 @@ const isNotEmpty = (value) => {
   return value.trim() !== '';
 };
 
+const generateId = (notes) => {
+  const notesIds = notes.map((note) => note.id);
+  return Math.max(...notesIds) + 1;
+};
+
 const AddNoteForm = () => {
   const notesContext = useContext(NotesContext);
 
@@ -22,7 +27,7 @@ const AddNoteForm = () => {
     }
 
     notesContext.addNote({
-      id: Math.random(),
+      id: generateId(notesContext.notes).toString(),
       date: Date(),
       content: noteContent,
     });
