@@ -8,6 +8,9 @@ const isNotEmpty = (value) => {
 };
 
 const generateId = (notes) => {
+  if (notes.length === 0) {
+    return 1;
+  }
   const notesIds = notes.map((note) => note.id);
   return Math.max(...notesIds) + 1;
 };

@@ -21,7 +21,7 @@ const NOTES_MOCK = [
 ];
 
 const defaultNotesState = {
-  notes: NOTES_MOCK,
+  notes: [],
 };
 
 const notesReducer = (state, action) => {
