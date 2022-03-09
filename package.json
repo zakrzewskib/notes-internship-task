@@ -1,5 +1,6 @@
 {
     "name": "notes-internship-task",
+    "homepage": "https://zakrzewskib.github.io/notes-internship-task/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

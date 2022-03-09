@@ -36,7 +36,9 @@ const Note = (props) => {
           {content}
         </ReactMarkdown>
         <p className={classes['note-date']}>
-          <Link to={`/notes/${note.id}`}>{date}</Link>
+          <Link to={`/notes-internship-task/notes/${note.id}`}>
+            {date}
+          </Link>
         </p>
       </div>
       <div className={classes['note-button-container']}>

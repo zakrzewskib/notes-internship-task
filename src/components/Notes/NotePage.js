@@ -25,7 +25,7 @@ const NotePage = () => {
   const note = notesContext.notes.find((note) => note.id === id);
 
   const navigateBack = () => {
-    navigate('/');
+    navigate('/notes-internship-task');
   };
 
   const deleteNote = () => {

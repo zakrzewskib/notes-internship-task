@@ -15,8 +15,11 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/notes/:id" element={<NotePage />} />
+          <Route path="/notes-internship-task/" element={<App />} />
+          <Route
+            path="/notes-internship-task/notes/:id"
+            element={<NotePage />}
+          />
         </Routes>
       </BrowserRouter>
     </NotesProvider>
