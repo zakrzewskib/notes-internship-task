@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import NotesContext from '../../store/notes-context';
+import Note from './Note';
 
 const NotePage = (props) => {
-  return <div>NotePage</div>;
+  const { id } = useParams();
+  const notesContext = useContext(NotesContext);
+  const note = notesContext.notes.find((note) => note.id === id);
+
+  return <Note note={note} />;
 };
 
 export default NotePage;
