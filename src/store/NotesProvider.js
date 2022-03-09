@@ -1,27 +1,8 @@
-import React, { useReducer, useEffect, useCallback } from 'react';
+import React, { useReducer } from 'react';
 
 import { useLocalStorage } from 'usehooks-ts';
 
 import NotesContext from './notes-context';
-
-const NOTES_MOCK = [
-  {
-    id: '1',
-    date: '06/17/2020',
-    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-  },
-  {
-    id: '2',
-    date: '06/19/2020',
-    content:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nobis, quia earum sunt placeat modi illum fugit **aliquid labore nesciunt** in ullam totam tenetur hic voluptatem autem ratione. Modi, exercitationem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nobis, quia earum sunt placeat modi illum fugit aliquid labore nesciunt in ullam totam tenetur hic voluptatem autem ratione. Modi, exercitationem.',
-  },
-  {
-    id: '3',
-    date: '06/20/2020',
-    content: '# Hello World',
-  },
-];
 
 const defaultNotesState = {
   notes: [],
