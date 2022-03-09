@@ -3,7 +3,7 @@ This project was created with Create React App and deployed with GitHub Pages: h
 
 I wanted to keep data in LocalStorage, but I couldn't do it, so after refreshing the page, data is lost.
 
-Time spent on project: 4 hours.
+Time spent on project: about 4.5 hours.
 
 Screenshots:
 ![image](https://user-images.githubusercontent.com/56975218/157441275-6dbda679-15c8-4bbb-99b9-f79bf76fca3e.png)
