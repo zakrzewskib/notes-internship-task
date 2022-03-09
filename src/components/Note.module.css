@@ -1,0 +1,41 @@
+.btn-add {
+    border: 1px solid #555;
+    background-color: #fff;
+}
+
+.note {
+    font-size: 1.8rem;
+    color: #444;
+    background-color: #eee;
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-content {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #e93f3c;
+}
+
+.note-button-container {
+    padding: 2.4rem;
+    align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .note {
+        flex-direction: column;
+    }
+    .note-content {
+        width: 100%;
+    }
+}

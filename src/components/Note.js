@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import NotesContext from '../store/notes-context';
-
 import ReactMarkdown from 'react-markdown';
+
+import classes from './Note.module.css';
 
 const maxNoteLength = 200;
 
@@ -15,14 +16,16 @@ const Note = (props) => {
       : note.content;
 
   return (
-    <li className="note">
-      <div className="note-content">
-        <ReactMarkdown className="markdown">{content}</ReactMarkdown>
-        <p className="note-date">{note.date}</p>
+    <li className={classes['note']}>
+      <div className={classes['note-content']}>
+        <ReactMarkdown className={classes['markdown']}>
+          {content}
+        </ReactMarkdown>
+        <p className={classes['note-date']}>{note.date}</p>
       </div>
-      <div className="note-button-container">
+      <div className={classes['note-button-container']}>
         <button
-          className="btn btn-delete"
+          className={`btn ${classes['btn-delete']}`}
           onClick={() => notesContext.deleteNote(note.id)}
         >
           Delete note

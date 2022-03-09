@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import NotesContext from '../store/notes-context';
 
+import classes from './AddNoteForm.module.css';
+
 const isNotEmpty = (value) => {
   return value.trim() !== '';
 };
@@ -27,7 +29,10 @@ const AddNoteForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="add-note-form container">
+    <form
+      onSubmit={onSubmit}
+      className={`${classes['add-note-form']} container`}
+    >
       <label htmlFor="note-content">Note</label>
       <textarea
         type="text"

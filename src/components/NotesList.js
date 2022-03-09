@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import NotesContext from '../store/notes-context';
 import Note from './Note';
 
+import classes from './NotesList.module.css';
+
 const NotesList = () => {
   const notesContext = useContext(NotesContext);
 
@@ -9,8 +11,8 @@ const NotesList = () => {
 
   if (notes.length === 0) {
     return (
-      <div className="notes-list container">
-        <h1 className="notes-header">No notes</h1>
+      <div className={classes['notes-list container']}>
+        <h1 className={classes['notes-header']}>No notes</h1>
       </div>
     );
   }
@@ -20,8 +22,8 @@ const NotesList = () => {
   ));
 
   return (
-    <div className="notes-list container">
-      <h1 className="notes-header">Latest notes</h1>
+    <div className={`${classes['notes-list']} container`}>
+      <h1 className={classes['notes-header']}>Latest notes</h1>
       <ul>{notesList}</ul>
     </div>
   );

@@ -13,50 +13,10 @@ html {
     font-size: 65%;
 }
 
-.main-header {
-    position: sticky;
-    top: 0;
-    background-color: #ddd;
-    padding: 1.6rem;
-}
-
-.main-header h1 {
-    font-size: 2.4rem;
-    color: #444;
-    font-weight: 500;
-}
-
 .container {
     max-width: 120rem;
     padding: 2.4rem;
     margin: 0 auto;
-}
-
-.add-note-form {
-    color: #444;
-    font-size: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-}
-
-.add-note-form label,
-textarea {
-    font: inherit;
-    color: inherit;
-}
-
-.add-note-form label {
-    font-weight: bold;
-    align-self: flex-start;
-}
-
-.add-note-form textarea {
-    resize: none;
-    padding: 1.2rem;
-    border-radius: 0.5rem;
-    width: 100%;
 }
 
 .btn {
@@ -65,61 +25,4 @@ textarea {
     padding: 0.8rem 2.4rem;
     cursor: pointer;
     border: none;
-}
-
-.btn-primary {
-    border: 1px solid #555;
-    background-color: #fff;
-}
-
-.notes-header {
-    text-align: center;
-    font-size: 2.8rem;
-    color: #444;
-    font-weight: bold;
-}
-
-.notes-list ul {
-    margin-top: 1.8rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-}
-
-.note {
-    font-size: 1.8rem;
-    color: #444;
-    background-color: #eee;
-    padding: 1.6rem;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.note-content {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.2rem;
-}
-
-.btn-delete {
-    color: #fff;
-    background-color: #e93f3c;
-}
-
-.note-button-container {
-    padding: 2.4rem;
-    align-self: center;
-}
-
-@media screen and (max-width: 600px) {
-    .note {
-        flex-direction: column;
-    }
-    .note-content {
-        width: 100%;
-    }
 }
