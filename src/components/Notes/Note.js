@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import NotesContext from '../store/notes-context';
+import NotesContext from '../../store/notes-context';
 import ReactMarkdown from 'react-markdown';
 
 import classes from './Note.module.css';
