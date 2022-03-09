@@ -22,10 +22,14 @@ const NotesList = () => {
   ));
 
   return (
-    <div className={`${classes['notes-list']} container`}>
-      <h1 className={classes['notes-header']}>Latest notes</h1>
-      <ul>{notesList}</ul>
-    </div>
+    <article className={`${classes['notes-list']} container`}>
+      <header className={classes['notes-header']}>
+        <h1>Latest notes</h1>
+      </header>
+      <section>
+        <ul>{notesList}</ul>
+      </section>
+    </article>
   );
 };
 
