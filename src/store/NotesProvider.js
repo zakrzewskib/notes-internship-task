@@ -1,4 +1,7 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect, useCallback } from 'react';
+
+import { useLocalStorage } from 'usehooks-ts';
+
 import NotesContext from './notes-context';
 
 const NOTES_MOCK = [
@@ -29,6 +32,7 @@ const notesReducer = (state, action) => {
     const updatedNotes = state.notes.filter(
       (note) => note.id !== action.id
     );
+    action.setNotes(updatedNotes);
     return {
       notes: updatedNotes,
     };
@@ -36,6 +40,7 @@ const notesReducer = (state, action) => {
 
   if (action.type === 'ADD') {
     const updatedNotes = [action.note, ...state.notes];
+    action.setNotes(updatedNotes);
     return {
       notes: updatedNotes,
     };
@@ -45,20 +50,22 @@ const notesReducer = (state, action) => {
 };
 
 const NotesProvider = (props) => {
+  const [notes, setNotes] = useLocalStorage('notes', []);
+
   const [notesState, dispatchNotesAction] = useReducer(
     notesReducer,
     defaultNotesState
   );
 
   const deleteNote = (id) => {
-    dispatchNotesAction({ type: 'DELETE', id: id });
+    dispatchNotesAction({ type: 'DELETE', id: id, setNotes });
   };
 
   const addNote = (note) => {
-    dispatchNotesAction({ type: 'ADD', note: note });
+    dispatchNotesAction({ type: 'ADD', note: note, setNotes });
   };
 
-  const notesContext = { notes: notesState.notes, deleteNote, addNote };
+  const notesContext = { notes, deleteNote, addNote };
 
   return (
     <NotesContext.Provider value={notesContext}>
