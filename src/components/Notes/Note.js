@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import NotesContext from '../../store/notes-context';
 import ReactMarkdown from 'react-markdown';
 
@@ -33,7 +35,9 @@ const Note = (props) => {
         <ReactMarkdown className={classes['markdown']}>
           {content}
         </ReactMarkdown>
-        <p className={classes['note-date']}>{date}</p>
+        <p className={classes['note-date']}>
+          <Link to={`/notes/${note.id}`}>{date}</Link>
+        </p>
       </div>
       <div className={classes['note-button-container']}>
         <button
