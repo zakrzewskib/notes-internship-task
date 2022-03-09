@@ -33,6 +33,14 @@ const NotePage = () => {
     notesContext.deleteNote(note.id);
   };
 
+  if (note == null) {
+    return (
+      <div className="container">
+        <h1>Note not found!</h1>
+      </div>
+    );
+  }
+
   return (
     <article className="container">
       <div className={classes['note-buttons']}>

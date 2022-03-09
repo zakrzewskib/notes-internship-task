@@ -14,8 +14,6 @@
     background-color: #eee;
     padding: 1.6rem;
     border-radius: 0.5rem;
-    display: flex;
-    justify-content: space-between;
 }
 
 .note-content {
@@ -24,9 +22,8 @@
     gap: 1.2rem;
 }
 
-.note-button-container {
-    padding: 2.4rem;
-    align-self: center;
+.note-date {
+    align-self: flex-end;
 }
 
 .note-date a:link,
