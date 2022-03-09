@@ -8,9 +8,6 @@ const NotePage = (props) => {
   const notesContext = useContext(NotesContext);
   const note = notesContext.notes.find((note) => note.id === id);
 
-  console.log(note);
-  console.log(notesContext.notes);
-
   return <Note note={note} />;
 };
 
