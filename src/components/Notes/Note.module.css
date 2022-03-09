@@ -1,8 +1,3 @@
-.btn-add {
-    border: 1px solid #555;
-    background-color: #fff;
-}
-
 .note {
     font-size: 1.8rem;
     color: #444;
@@ -36,7 +31,7 @@
     color: #ff7d7b;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 630px) {
     .note {
         flex-direction: column;
     }

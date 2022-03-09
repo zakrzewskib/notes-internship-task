@@ -7,3 +7,34 @@
 .btn-go-back {
     background-color: #eee;
 }
+
+.note {
+    font-size: 1.8rem;
+    color: #444;
+    background-color: #eee;
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.note-button-container {
+    padding: 2.4rem;
+    align-self: center;
+}
+
+.note-date a:link,
+.note-date a:visited {
+    color: #5a5aec;
+}
+
+.note-date a:hover,
+.note-date a:active {
+    color: #ff7d7b;
+}
