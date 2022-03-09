@@ -25,4 +25,10 @@ html {
     padding: 0.8rem 2.4rem;
     cursor: pointer;
     border: none;
+    font-weight: bold;
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #e93f3c;
 }

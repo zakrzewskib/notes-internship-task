@@ -41,7 +41,7 @@ const Note = (props) => {
       </div>
       <div className={classes['note-button-container']}>
         <button
-          className={`btn ${classes['btn-delete']}`}
+          className="btn btn-delete"
           onClick={() => notesContext.deleteNote(note.id)}
         >
           Delete note
