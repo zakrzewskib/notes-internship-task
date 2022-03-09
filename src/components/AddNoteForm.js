@@ -23,9 +23,11 @@ const AddNoteForm = () => {
 
     notesContext.addNote({
       id: Math.random(),
-      date: Date.now(),
+      date: Date(),
       content: noteContent,
     });
+
+    setNoteContent('');
   };
 
   return (

@@ -6,6 +6,16 @@ import classes from './Note.module.css';
 
 const maxNoteLength = 200;
 
+const formatDate = (date) => {
+  const dateObject = new Date(date);
+
+  const dd = String(dateObject.getDate()).padStart(2, '0');
+  const mm = String(dateObject.getMonth() + 1).padStart(2, '0');
+  const yyyy = dateObject.getFullYear();
+
+  return `${mm}/${dd}/${yyyy}`;
+};
+
 const Note = (props) => {
   const notesContext = useContext(NotesContext);
 
@@ -15,13 +25,15 @@ const Note = (props) => {
       ? note.content.substring(0, maxNoteLength) + '...'
       : note.content;
 
+  const date = formatDate(note.date);
+
   return (
     <li className={classes['note']}>
       <div className={classes['note-content']}>
         <ReactMarkdown className={classes['markdown']}>
           {content}
         </ReactMarkdown>
-        <p className={classes['note-date']}>{note.date}</p>
+        <p className={classes['note-date']}>{date}</p>
       </div>
       <div className={classes['note-button-container']}>
         <button
