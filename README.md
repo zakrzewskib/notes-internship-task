@@ -1,7 +1,7 @@
 ## About 
 This project was created with Create React App and deployed with GitHub Pages: https://zakrzewskib.github.io/notes-internship-task/.
 
-I wanted to keep data in LocalStorage, but I couldn't do it.
+I wanted to keep data in LocalStorage, but I couldn't do it, so after refreshing the page, data is lost.
 
 Time spent on project: 4 hours.
 
